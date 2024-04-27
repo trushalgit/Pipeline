@@ -19,11 +19,11 @@ pipeline {
 		    steps {
 			script {
 			 if ( env.ENV == 'QA' ){
-        	sh 'cp target/Pipeline.war /home/linux/maven/apache-tomcat-9.0.88/webapps
+        	sh 'cp target/Pipeline.war /home/linux/maven/apache-tomcat-9.0.88/webapps'
         	echo "deployment has been COMPLETED on QA!"
 			 }
 			else ( env.ENV == 'UAT' ){
-    		sh 'cp target/Pipeline.war /home/linux/maven/apache-tomcat-9.0.88/webapps
+    		sh 'cp target/Pipeline.war /home/linux/maven/apache-tomcat-9.0.88/webapps'
     		echo "deployment has been done on UAT!"
 			}
 			}}}	
