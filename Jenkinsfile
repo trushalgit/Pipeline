@@ -12,7 +12,7 @@ pipeline {
                         }}
 		stage('Deployment'){
 		    steps {
-		sh 'cp target/PIPELINE.war /home/linux/maven/apache-tomcat-9.0.88/webapps'
+		sh 'cp target/Pipeline.war /home/linux/maven/apache-tomcat-9.0.88/webapps'
                 echo "deployment has been COMPLETED on QA!"
 			 }}
 
