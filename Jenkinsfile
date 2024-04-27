@@ -18,7 +18,7 @@ pipeline {
 		stage('Deployment'){
 		    steps {
 			script {
-			 if ( env.ENV == 'Dev' ){
+			 if ( env.ENV == 'DEV' ){
         	sh 'cp target/Pipeline.war /home/linux/maven/apache-tomcat-9.0.88/webapps'
         	echo "deployment has been COMPLETED on QA!"
 			 }
