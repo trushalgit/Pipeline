@@ -2,9 +2,8 @@ pipeline {
 	agent any 
 	
 	parameters {
-  		string defaultValue: 'DEV', name: 'ENV'
-	}
-
+                  choice choices: ['DEV', 'QA', 'UAT'], name: 'ENV'
+                 }
 	triggers {
   		pollSCM '* * * * *'
 	}
