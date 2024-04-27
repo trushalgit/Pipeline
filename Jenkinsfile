@@ -4,6 +4,10 @@ pipeline {
 	parameters {
   		string defaultValue: 'DEV', name: 'ENV'
 	}
+
+	triggers {
+  		pollSCM '* * * * *'
+	}
 	
 	stages {
 	    stage('Checkout') {
