@@ -16,4 +16,4 @@ pipeline {
                 echo "deployment has been COMPLETED on QA!"
 			 }}
 
-}
+}}
