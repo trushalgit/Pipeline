@@ -1,7 +1,7 @@
 <Html>  
 <head>   
 <title>  
-<h1>Registration Page For College Admission<h1>
+</h1>Registration Page For College Admission</h1>
 </title>  
 </head>  
 <body bgcolor="Lightskyblue">  
