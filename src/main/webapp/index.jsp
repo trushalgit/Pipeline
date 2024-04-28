@@ -9,11 +9,11 @@
 <br>  
 <form>  
   
-<label> Firstname </label>         
+<label> First name </label>         
 <input type="text" name="firstname" size="15"/> <br> <br>  
-<label> Middlename: </label>     
+<label> Middle name: </label>     
 <input type="text" name="middlename" size="15"/> <br> <br>  
-<label> Lastname: </label>         
+<label> Last name: </label>         
 <input type="text" name="lastname" size="15"/> <br> <br>  
   
 <label>   
