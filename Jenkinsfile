@@ -4,9 +4,6 @@ pipeline {
 	parameters {
                   choice choices: ['DEV', 'QA', 'UAT'], name: 'ENV'
                  }
-	triggers {
-  		pollSCM '* * * * *'
-	}
 	
 	stages {
 	    stage('Checkout') {
@@ -15,9 +12,8 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh 'home/linux/installers/apache-maven-3.9.6/bin/mvn install'
-
-	                 }}
+			  sh '/home/linux/installers/apache-maven-3.9.6/bin/mvn install'
+		   }}
 		stage('Deployment'){
 		    steps {
 			script {
