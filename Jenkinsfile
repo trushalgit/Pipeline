@@ -21,9 +21,9 @@ pipeline {
         	sh 'cp target/Pipeline.war /home/devops/installers/apache-tomcat-9.0.88/webapps'
         	echo "deployment has been COMPLETED on Dev!"
 			 }
-			else ( env.ENV == 'UAT' ){
+			else ( env.ENV == 'QA' ){
     		sh 'cp target/Pipeline.war /home/devops/installers/apache-tomcat-9.0.88/webapps'
-    		echo "deployment has been done on UAT!"
+    		echo "deployment has been done on QA!"
 			}
 			}}}	
 }}
