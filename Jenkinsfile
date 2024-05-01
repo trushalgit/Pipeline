@@ -12,17 +12,17 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/linux/installers/apache-maven-3.9.6/bin/mvn install'
+			  sh '/home/devops/installers/apache-maven-3.9.6/bin/mvn install'
 		   }}
 		stage('Deployment'){
 		    steps {
 			script {
 			 if ( env.ENV == 'DEV' ){
-        	sh 'cp target/Pipeline.war /home/linux/installers/apache-tomcat-9.0.88/webapps'
+        	sh 'cp target/Pipeline.war /home/devops/installers/apache-tomcat-9.0.88/webapps'
         	echo "deployment has been COMPLETED on Dev!"
 			 }
 			else ( env.ENV == 'UAT' ){
-    		sh 'cp target/Pipeline.war /home/linux/installers/apache-tomcat-9.0.88/webapps'
+    		sh 'cp target/Pipeline.war /home/devops/installers/apache-tomcat-9.0.88/webapps'
     		echo "deployment has been done on UAT!"
 			}
 			}}}	
