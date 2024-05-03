@@ -22,8 +22,8 @@ pipeline {
                     if (env.ENV == 'DEV') {
                         sh 'cp target/Pipeline.war /home/devops/installers/apache-tomcat-9.0.88/webapps'
                         echo "Deployment has been COMPLETED on Dev!"
-                    } else if (env.ENV == 'Q') {
-                        sh 'cp target/Pipeline.war /home/devops/installers/apache-tomcat-9.0.88/webapps'
+                    } else if (env.ENV == 'QA') {
+                        sh 'cp target/Pipelin.war /home/devops/installers/apache-tomcat-9.0.88/webapps'
                         echo "Deployment has been done on QA!"
                     }
                 }
