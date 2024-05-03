@@ -26,9 +26,11 @@ pipeline {
     		echo "deployment has been done on QA!"
 			}
 			}}}	
-		stage('slack-notification'){
-		   steps {
-		     
-                   slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'devops-slack', color: 'good', message: 'Welcome', teamDomain: 'contoso', tokenCredentialId: '6bbc0d9c-5ccb-4126-9738-9f4ed8ae5105'		     
-		   }}	
+		post {
+                 success {
+                      script {
+                slackSend(channel: "devops2-slack", message: "my-first-pipeline-slack passed successfully")
+                             }
+                        }
+                  }
 }}
